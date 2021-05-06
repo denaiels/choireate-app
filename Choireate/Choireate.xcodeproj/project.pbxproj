@@ -56,6 +56,11 @@
 		5F9220B526436EA9000CA8D8 /* lowerLeh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F92209126436EA9000CA8D8 /* lowerLeh.mp3 */; };
 		5F9220B626436EA9000CA8D8 /* lowerSel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F92209226436EA9000CA8D8 /* lowerSel.mp3 */; };
 		5F9220B726436EA9000CA8D8 /* lowerMi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F92209326436EA9000CA8D8 /* lowerMi.mp3 */; };
+		5F9220B926438964000CA8D8 /* Blank.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F9220B826438964000CA8D8 /* Blank.mp3 */; };
+		5F9220BB26438B76000CA8D8 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F9220BA26438B76000CA8D8 /* Onboarding.storyboard */; };
+		5F9220BF2643A02C000CA8D8 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9220BE2643A02C000CA8D8 /* WalkthroughContentViewController.swift */; };
+		5F9220C12643A17E000CA8D8 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F9220C02643A17E000CA8D8 /* WalkthroughPageViewController.swift */; };
+		5FCEBEE32643A87000773B9E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCEBEE22643A87000773B9E /* OnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +115,11 @@
 		5F92209126436EA9000CA8D8 /* lowerLeh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lowerLeh.mp3; sourceTree = "<group>"; };
 		5F92209226436EA9000CA8D8 /* lowerSel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lowerSel.mp3; sourceTree = "<group>"; };
 		5F92209326436EA9000CA8D8 /* lowerMi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lowerMi.mp3; sourceTree = "<group>"; };
+		5F9220B826438964000CA8D8 /* Blank.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Blank.mp3; sourceTree = "<group>"; };
+		5F9220BA26438B76000CA8D8 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		5F9220BE2643A02C000CA8D8 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		5F9220C02643A17E000CA8D8 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		5FCEBEE22643A87000773B9E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,12 +155,10 @@
 				5F92206C264360F2000CA8D8 /* Audio Files */,
 				5F6A5B7E2642EF0200340D1A /* Extension */,
 				5F6A5B752642E08C00340D1A /* Model */,
-				5F6A5B6A2642DFBF00340D1A /* Collection Cell */,
-				5F6A5B692642DFB800340D1A /* Table Cell */,
+				5F9220BC26438F94000CA8D8 /* View */,
+				5F9220BD26438FB1000CA8D8 /* Controller */,
 				5F6A5B512642D97F00340D1A /* AppDelegate.swift */,
 				5F6A5B532642D97F00340D1A /* SceneDelegate.swift */,
-				5F6A5B552642D97F00340D1A /* ViewController.swift */,
-				5F6A5B572642D97F00340D1A /* Main.storyboard */,
 				5F6A5B5A2642D97F00340D1A /* Assets.xcassets */,
 				5F6A5B5C2642D97F00340D1A /* LaunchScreen.storyboard */,
 				5F6A5B5F2642D97F00340D1A /* Info.plist */,
@@ -196,6 +204,7 @@
 		5F92206C264360F2000CA8D8 /* Audio Files */ = {
 			isa = PBXGroup;
 			children = (
+				5F9220B826438964000CA8D8 /* Blank.mp3 */,
 				5F92208726436EA9000CA8D8 /* Lower */,
 				5F92207A26436EA9000CA8D8 /* Middle */,
 				5F92206D26436EA9000CA8D8 /* Upper */,
@@ -258,6 +267,28 @@
 				5F92209326436EA9000CA8D8 /* lowerMi.mp3 */,
 			);
 			path = Lower;
+			sourceTree = "<group>";
+		};
+		5F9220BC26438F94000CA8D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F6A5B572642D97F00340D1A /* Main.storyboard */,
+				5F9220BA26438B76000CA8D8 /* Onboarding.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F9220BD26438FB1000CA8D8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F6A5B6A2642DFBF00340D1A /* Collection Cell */,
+				5F6A5B692642DFB800340D1A /* Table Cell */,
+				5F6A5B552642D97F00340D1A /* ViewController.swift */,
+				5F9220C02643A17E000CA8D8 /* WalkthroughPageViewController.swift */,
+				5F9220BE2643A02C000CA8D8 /* WalkthroughContentViewController.swift */,
+				5FCEBEE22643A87000773B9E /* OnboardingViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,6 +381,7 @@
 				5F92209926436EA9000CA8D8 /* upperDi.mp3 in Resources */,
 				5F9220B426436EA9000CA8D8 /* lowerRi.mp3 in Resources */,
 				5F9220A426436EA9000CA8D8 /* Di.mp3 in Resources */,
+				5F9220B926438964000CA8D8 /* Blank.mp3 in Resources */,
 				5F9220B526436EA9000CA8D8 /* lowerLeh.mp3 in Resources */,
 				5F6A5B6E2642DFDA00340D1A /* CollectionTableViewCell.xib in Resources */,
 				5F9220A226436EA9000CA8D8 /* Fi.mp3 in Resources */,
@@ -358,6 +390,7 @@
 				5F92209C26436EA9000CA8D8 /* upperSel.mp3 in Resources */,
 				5F92209426436EA9000CA8D8 /* upperMi.mp3 in Resources */,
 				5F9220AE26436EA9000CA8D8 /* lowerDi.mp3 in Resources */,
+				5F9220BB26438B76000CA8D8 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +407,10 @@
 				5F6A5B522642D97F00340D1A /* AppDelegate.swift in Sources */,
 				5F6A5B542642D97F00340D1A /* SceneDelegate.swift in Sources */,
 				5F6A5B822642EF3900340D1A /* HexColor.swift in Sources */,
+				5F9220BF2643A02C000CA8D8 /* WalkthroughContentViewController.swift in Sources */,
 				5F6A5B6D2642DFDA00340D1A /* CollectionTableViewCell.swift in Sources */,
+				5F9220C12643A17E000CA8D8 /* WalkthroughPageViewController.swift in Sources */,
+				5FCEBEE32643A87000773B9E /* OnboardingViewController.swift in Sources */,
 				5F6A5B792642E0A500340D1A /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,28 +18,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ii6-cK-Iu3" userLabel="headView">
                                 <rect key="frame" x="0.0" y="0.0" width="844" height="74"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5R-V6-2Wa">
-                                        <rect key="frame" x="448" y="26" width="19" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="16a-WT-rdV"/>
-                                            <constraint firstAttribute="width" constant="19" id="1dH-bv-qzc"/>
-                                        </constraints>
-                                        <state key="normal" image="Play"/>
-                                        <connections>
-                                            <action selector="playButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="GQt-AN-SMH"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcY-hs-O5u">
-                                        <rect key="frame" x="381" y="26" width="23" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="YjH-ay-JHq"/>
-                                            <constraint firstAttribute="width" constant="23" id="pnd-VA-nbe"/>
-                                        </constraints>
-                                        <state key="normal" image="Backwards"/>
-                                        <connections>
-                                            <action selector="backwardsButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="Tbt-ti-Aqj"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4/4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRi-Zh-j5Y">
                                         <rect key="frame" x="109" y="26" width="26" height="21"/>
                                         <constraints>
@@ -59,16 +37,25 @@
                                         <color key="textColor" red="0.90345740320000001" green="0.32052603359999998" blue="0.3999912739" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5R-V6-2Wa">
+                                        <rect key="frame" x="413" y="26" width="19" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="16a-WT-rdV"/>
+                                            <constraint firstAttribute="width" constant="19" id="1dH-bv-qzc"/>
+                                        </constraints>
+                                        <state key="normal" image="Play"/>
+                                        <connections>
+                                            <action selector="playButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="GQt-AN-SMH"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="H5R-V6-2Wa" firstAttribute="leading" secondItem="XcY-hs-O5u" secondAttribute="trailing" constant="44" id="9sy-uf-QOy"/>
-                                    <constraint firstItem="XcY-hs-O5u" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jh9-Yg-3dK" secondAttribute="trailing" constant="8" symbolic="YES" id="JQT-J3-LcP"/>
                                     <constraint firstItem="KRi-Zh-j5Y" firstAttribute="leading" secondItem="ii6-cK-Iu3" secondAttribute="leading" constant="109" id="Ktd-99-vnH"/>
+                                    <constraint firstItem="H5R-V6-2Wa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jh9-Yg-3dK" secondAttribute="trailing" constant="8" symbolic="YES" id="Poa-hh-cke"/>
                                     <constraint firstItem="jh9-Yg-3dK" firstAttribute="leading" secondItem="KRi-Zh-j5Y" secondAttribute="trailing" constant="31" id="UQK-xw-zJc"/>
-                                    <constraint firstAttribute="trailing" secondItem="H5R-V6-2Wa" secondAttribute="trailing" constant="377" id="dJm-Zh-mF0"/>
+                                    <constraint firstAttribute="trailing" secondItem="H5R-V6-2Wa" secondAttribute="trailing" constant="412" id="dJm-Zh-mF0"/>
                                     <constraint firstItem="H5R-V6-2Wa" firstAttribute="top" secondItem="ii6-cK-Iu3" secondAttribute="top" constant="26" id="dxa-oN-cXM"/>
-                                    <constraint firstItem="XcY-hs-O5u" firstAttribute="top" secondItem="ii6-cK-Iu3" secondAttribute="top" constant="26" id="lJy-ck-ykm"/>
                                     <constraint firstItem="KRi-Zh-j5Y" firstAttribute="top" secondItem="ii6-cK-Iu3" secondAttribute="top" constant="26" id="pBb-2w-ISf"/>
                                     <constraint firstItem="jh9-Yg-3dK" firstAttribute="top" secondItem="ii6-cK-Iu3" secondAttribute="top" constant="26" id="pJG-Rj-3hJ"/>
                                 </constraints>
@@ -239,6 +226,21 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Infopage" translatesAutoresizingMaskIntoConstraints="NO" id="eYS-11-HF2">
+                                <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHo-lu-NaK">
+                                <rect key="frame" x="754" y="19" width="30" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.90345740320000001" green="0.32052603359999998" blue="0.3999912739" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="PSm-tR-8ma"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a7Y-fG-V8E"/>
                         <color key="backgroundColor" red="0.011708233510000001" green="0.01191492658" blue="0.0039204889909999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -261,13 +263,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backwardsButton" destination="XcY-hs-O5u" id="TPd-MP-3sT"/>
+                        <outlet property="closeButton" destination="xHo-lu-NaK" id="uhk-Yh-jWf"/>
                         <outlet property="dotButton" destination="Urz-hV-7v9" id="lMa-br-rYm"/>
                         <outlet property="fiveButton" destination="Fbx-Uo-Glo" id="i4i-WQ-uW7"/>
                         <outlet property="fiveUpButton" destination="WpM-r4-1uO" id="4qN-9L-PNV"/>
                         <outlet property="fourButton" destination="853-Qs-i2c" id="zQl-RV-76e"/>
                         <outlet property="fourUpButton" destination="bvW-vc-0ee" id="L3q-qB-Kvh"/>
                         <outlet property="infoButton" destination="QZA-iC-JM0" id="pfF-if-Zak"/>
+                        <outlet property="infoPage" destination="eYS-11-HF2" id="BOx-1S-jWT"/>
                         <outlet property="lowerDotButton" destination="69n-S7-hpT" id="1SB-Wd-1yz"/>
                         <outlet property="okButton" destination="Krw-ex-Xol" id="Sr5-p5-ZiQ"/>
                         <outlet property="oneButton" destination="OkS-wC-mnI" id="IPi-xz-3VW"/>
@@ -290,9 +293,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Backwards" width="23" height="20"/>
         <image name="Dot" width="36" height="36"/>
         <image name="Info" width="23" height="22"/>
+        <image name="Infopage" width="1077" height="558"/>
         <image name="Lower Dot" width="36" height="36"/>
         <image name="Note Button 0" width="37" height="36"/>
         <image name="Note Button 1" width="37" height="36"/>

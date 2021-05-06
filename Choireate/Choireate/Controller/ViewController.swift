@@ -16,6 +16,9 @@ var chosenNoteUpperNote: Bool = false
 var chosenNoteLowerNote: Bool = false
 var chosenAudioFileName: String = "blank"
 
+//var player: AVAudioPlayer?
+//var player: AVQueuePlayer?
+
 protocol ViewControllerDelegate {
     func didSetNote(_ note: Note)
 }
@@ -25,6 +28,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var delegate: ViewControllerDelegate?
     
     // MARK: - Outlets
+    
+    // Info
+    @IBOutlet weak var infoPage: UIImageView!
+    @IBOutlet weak var closeButton: UIButton!
     
     // TableView
     @IBOutlet weak var table: UITableView!
@@ -58,25 +65,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - Model
     
     var models = [Note]()
-    var player: AVAudioPlayer?
-    
-    
     
     
     // MARK: - Variables
 
+    var player: AVQueuePlayer?
+    var items: [AVPlayerItem] = [];
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getDefaultModel()
-        print(models)
+//        print(models)
         
         table.register(CollectionTableViewCell.nib(), forCellReuseIdentifier: CollectionTableViewCell.identifier)
         
         table.delegate = self
         table.dataSource = self
+        
+        infoPage.isHidden = true
+        closeButton.isHidden = true
     }
     
     
@@ -84,8 +93,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // MARK: - Actions
     
+    // Info
+    @IBAction func closeButtonDidTap(_ sender: UIButton) {
+        infoPage.isHidden = true
+        closeButton.isHidden = true
+    }
+    
+    
     // Keyboard
     @IBAction func infoButtonDidTap(_ sender: UIButton) {
+        infoPage.isHidden = false
+        closeButton.isHidden = false
     }
     @IBAction func okButtonDidTap(_ sender: UIButton) {
         if chosenNoteUpperNote == true {
@@ -103,6 +121,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         setNoteOnIndex()
         table.reloadData()
         
+        chosenNoteName = .blank
+        chosenNoteImage = "Blank"
+        chosenNoteImageBlack = "Blank"
+        chosenNoteUpperNote = false
+        chosenNoteLowerNote = false
+        chosenAudioFileName = "blank"
     }
     @IBAction func dotButtonDidTap(_ sender: UIButton) {
         chosenNoteName = .dot
@@ -203,21 +227,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Playback
     @IBAction func playButtonDidTap(_ sender: UIButton) {
-        if let player = player, player.isPlaying {
-            // stop playback
-        } else {
-            // set up and play
-            do {
-                try AVAudioSession.sharedInstance().setMode(.default)
-                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-                
-                
-            } catch {
-                print("audio cannot be played")
-            }
+        
+        var listOfNotes: [String] = []
+        
+        for note in models {
+            listOfNotes.append(note.audioFileName)
         }
-    }
-    @IBAction func backwardsButtonDidTap(_ sender: UIButton) {
+        
+        print(listOfNotes)
+            
+        for item in listOfNotes {
+            guard let stringUrl = Bundle.main.path(forResource: item, ofType: "mp3") else { return }
+            let url = URL(fileURLWithPath: stringUrl)
+            let item = AVPlayerItem(url: url)
+            items.append(item)
+        }
+        
+//        print(items)
+        player = AVQueuePlayer(items: items)
+        player?.play()
+        
+        print("main lagu")
     }
     
     
@@ -231,9 +261,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func setNoteOnIndex() {
-        
         self.models[selectedIndex] = Note(name: chosenNoteName, lowerNote: chosenNoteLowerNote, upperNote: chosenNoteUpperNote, image: chosenNoteImage, imageBlack: chosenNoteImageBlack, audioFileName: chosenAudioFileName)
-//        delegate?.didSetNote(Note(name: chosenNoteName, lowerNote: chosenNoteLowerNote, upperNote: chosenNoteUpperNote, image: chosenNoteImage, imageBlack: chosenNoteImageBlack, audioFileName: chosenAudioFileName))
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let onboardingViewController = storyboard.instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController {
+            present(onboardingViewController, animated: true, completion: nil)
+        }
     }
     
 
