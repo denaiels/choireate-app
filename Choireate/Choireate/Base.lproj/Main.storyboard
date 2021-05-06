@@ -25,6 +25,9 @@
                                             <constraint firstAttribute="width" constant="19" id="1dH-bv-qzc"/>
                                         </constraints>
                                         <state key="normal" image="Play"/>
+                                        <connections>
+                                            <action selector="playButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="GQt-AN-SMH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcY-hs-O5u">
                                         <rect key="frame" x="381" y="26" width="23" height="22"/>
@@ -33,6 +36,9 @@
                                             <constraint firstAttribute="width" constant="23" id="pnd-VA-nbe"/>
                                         </constraints>
                                         <state key="normal" image="Backwards"/>
+                                        <connections>
+                                            <action selector="backwardsButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="Tbt-ti-Aqj"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4/4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRi-Zh-j5Y">
                                         <rect key="frame" x="109" y="26" width="26" height="21"/>
@@ -90,96 +96,145 @@
                                         <rect key="frame" x="80" y="52" width="23" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Info"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4n-vb-AI0">
-                                        <rect key="frame" x="136" y="22" width="39" height="82"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="Navigation Button Left"/>
+                                        <connections>
+                                            <action selector="infoButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="bG5-Nc-kLH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrV-sZ-gbn">
-                                        <rect key="frame" x="191" y="68" width="37" height="36"/>
+                                        <rect key="frame" x="165" y="72" width="37" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Note Button 0"/>
+                                        <connections>
+                                            <action selector="zeroButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="dJB-hV-CMc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urz-hV-7v9">
-                                        <rect key="frame" x="191" y="22" width="36" height="36"/>
+                                        <rect key="frame" x="165" y="26" width="36" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Dot"/>
+                                        <connections>
+                                            <action selector="dotButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="RRA-Tw-VZO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkS-wC-mnI">
-                                        <rect key="frame" x="244" y="68" width="37" height="36"/>
+                                        <rect key="frame" x="218" y="72" width="37" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Note Button 1"/>
+                                        <connections>
+                                            <action selector="oneButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="wSX-bM-R2e"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6c-Td-MoT">
-                                        <rect key="frame" x="297" y="68" width="37" height="36"/>
+                                        <rect key="frame" x="271" y="72" width="37" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Note Button 2"/>
+                                        <connections>
+                                            <action selector="twoButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="WQr-pU-Cfw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HlI-4S-vaO">
-                                        <rect key="frame" x="350" y="68" width="37" height="36"/>
+                                        <rect key="frame" x="324" y="72" width="37" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Note Button 3"/>
+                                        <connections>
+                                            <action selector="threeButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="F9I-XG-RSO"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="853-Qs-i2c">
-                                        <rect key="frame" x="403" y="68" width="37" height="36"/>
+                                        <rect key="frame" x="377" y="72" width="37" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Note Button 4"/>
+                                        <connections>
+                                            <action selector="fourButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="Ect-jv-m0R"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbx-Uo-Glo">
-                                        <rect key="frame" x="456" y="68" width="36" height="36"/>
+                                        <rect key="frame" x="430" y="72" width="36" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Note Button 5"/>
+                                        <connections>
+                                            <action selector="fiveButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="GAH-LC-YDE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXE-TT-PtV">
-                                        <rect key="frame" x="508" y="68" width="37" height="36"/>
+                                        <rect key="frame" x="482" y="72" width="37" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Note Button 6"/>
+                                        <connections>
+                                            <action selector="sixButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="ybL-F9-zSE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kv1-kk-ZhI">
-                                        <rect key="frame" x="561" y="68" width="37" height="36"/>
+                                        <rect key="frame" x="535" y="72" width="37" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Note Button 7"/>
+                                        <connections>
+                                            <action selector="sevenButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="xFY-7j-3mn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69n-S7-hpT">
-                                        <rect key="frame" x="614" y="68" width="36" height="36"/>
+                                        <rect key="frame" x="588" y="72" width="36" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Lower Dot"/>
+                                        <connections>
+                                            <action selector="lowerDotButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="wp1-Hw-DzU"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7F-EG-DjB">
-                                        <rect key="frame" x="270" y="22" width="37" height="36"/>
+                                        <rect key="frame" x="244" y="26" width="37" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Note Button 1up"/>
+                                        <connections>
+                                            <action selector="oneUpButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="TZZ-Cv-ZLQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBN-G9-IcQ">
-                                        <rect key="frame" x="323" y="22" width="37" height="36"/>
+                                        <rect key="frame" x="297" y="26" width="37" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Note Button 2up"/>
+                                        <connections>
+                                            <action selector="twoUpButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="ltB-ea-rLy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvW-vc-0ee">
-                                        <rect key="frame" x="429" y="22" width="37" height="36"/>
+                                        <rect key="frame" x="403" y="26" width="37" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Note Button 4up"/>
+                                        <connections>
+                                            <action selector="fourUpButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="Xl5-K4-mxp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WpM-r4-1uO">
-                                        <rect key="frame" x="482" y="22" width="37" height="36"/>
+                                        <rect key="frame" x="456" y="26" width="37" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Note Button 5up"/>
+                                        <connections>
+                                            <action selector="fiveUpButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="Ami-fO-s4A"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spW-lI-XdW">
-                                        <rect key="frame" x="535" y="22" width="37" height="36"/>
+                                        <rect key="frame" x="509" y="26" width="37" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Note Button 6up"/>
+                                        <connections>
+                                            <action selector="sixUpButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="7KU-Tq-dAn"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krw-ex-Xol">
-                                        <rect key="frame" x="666" y="22" width="39" height="82"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krw-ex-Xol" userLabel="Ok Button">
+                                        <rect key="frame" x="641" y="26" width="39" height="82"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="Navigation Button Right"/>
+                                        <state key="normal" image="OK"/>
+                                        <connections>
+                                            <action selector="okButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="hqL-tx-9zs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjn-lp-ZTA">
-                                        <rect key="frame" x="614" y="15" width="36" height="43"/>
+                                        <rect key="frame" x="588" y="19" width="36" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Upper Dot"/>
+                                        <connections>
+                                            <action selector="upperDotButtonDidTap:" destination="lwG-aD-FNf" eventType="touchUpInside" id="prO-PA-ilx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -206,7 +261,27 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backwardsButton" destination="XcY-hs-O5u" id="TPd-MP-3sT"/>
+                        <outlet property="dotButton" destination="Urz-hV-7v9" id="lMa-br-rYm"/>
+                        <outlet property="fiveButton" destination="Fbx-Uo-Glo" id="i4i-WQ-uW7"/>
+                        <outlet property="fiveUpButton" destination="WpM-r4-1uO" id="4qN-9L-PNV"/>
+                        <outlet property="fourButton" destination="853-Qs-i2c" id="zQl-RV-76e"/>
+                        <outlet property="fourUpButton" destination="bvW-vc-0ee" id="L3q-qB-Kvh"/>
+                        <outlet property="infoButton" destination="QZA-iC-JM0" id="pfF-if-Zak"/>
+                        <outlet property="lowerDotButton" destination="69n-S7-hpT" id="1SB-Wd-1yz"/>
+                        <outlet property="okButton" destination="Krw-ex-Xol" id="Sr5-p5-ZiQ"/>
+                        <outlet property="oneButton" destination="OkS-wC-mnI" id="IPi-xz-3VW"/>
+                        <outlet property="oneUpButton" destination="A7F-EG-DjB" id="1oR-nN-AWG"/>
+                        <outlet property="playButton" destination="H5R-V6-2Wa" id="vTE-8F-pxz"/>
+                        <outlet property="sevenButton" destination="kv1-kk-ZhI" id="OBy-pn-NuF"/>
+                        <outlet property="sixButton" destination="iXE-TT-PtV" id="8C0-Vc-mqP"/>
+                        <outlet property="sixUpButton" destination="spW-lI-XdW" id="mUn-7A-EzY"/>
                         <outlet property="table" destination="HpU-H9-DWP" id="pyc-gU-ihd"/>
+                        <outlet property="threeButton" destination="HlI-4S-vaO" id="gum-PK-RY9"/>
+                        <outlet property="twoButton" destination="A6c-Td-MoT" id="LeW-ez-Ziq"/>
+                        <outlet property="twoUpButton" destination="XBN-G9-IcQ" id="oor-jA-zQm"/>
+                        <outlet property="upperDotButton" destination="rjn-lp-ZTA" id="DOC-sY-5dI"/>
+                        <outlet property="zeroButton" destination="DrV-sZ-gbn" id="YbX-5m-OYa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qu4-v3-zcE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -219,8 +294,6 @@
         <image name="Dot" width="36" height="36"/>
         <image name="Info" width="23" height="22"/>
         <image name="Lower Dot" width="36" height="36"/>
-        <image name="Navigation Button Left" width="39" height="82"/>
-        <image name="Navigation Button Right" width="39" height="82"/>
         <image name="Note Button 0" width="37" height="36"/>
         <image name="Note Button 1" width="37" height="36"/>
         <image name="Note Button 1up" width="37" height="36"/>
@@ -234,6 +307,7 @@
         <image name="Note Button 6" width="37" height="36"/>
         <image name="Note Button 6up" width="37" height="36"/>
         <image name="Note Button 7" width="37" height="36"/>
+        <image name="OK" width="39" height="82"/>
         <image name="Play" width="19" height="21"/>
         <image name="Upper Dot" width="36" height="43"/>
     </resources>

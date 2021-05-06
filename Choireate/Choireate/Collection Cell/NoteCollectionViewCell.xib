@@ -10,14 +10,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NoteCollectionViewCell" id="gTV-IL-0wX" customClass="NoteCollectionViewCell" customModule="Choireate" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="30" height="189"/>
+            <rect key="frame" x="0.0" y="0.0" width="30" height="265"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="30" height="189"/>
+                <rect key="frame" x="0.0" y="0.0" width="30" height="265"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hg4-la-JWQ" userLabel="Note Image">
-                        <rect key="frame" x="5" y="97" width="20" height="25"/>
+                        <rect key="frame" x="5" y="173" width="20" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="2te-he-ZcO"/>
                             <constraint firstAttribute="width" constant="20" id="460-qx-cNI"/>
@@ -29,45 +29,76 @@
                         <color key="textColor" red="0.97617465260000003" green="0.97726231809999997" blue="0.93332773449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DotNote" translatesAutoresizingMaskIntoConstraints="NO" id="XVh-vv-NuG" userLabel="Lower Dot Image">
-                        <rect key="frame" x="14" y="122" width="2" height="2"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="2" id="0IV-My-ngd"/>
-                            <constraint firstAttribute="height" constant="2" id="a30-28-KzA"/>
-                        </constraints>
-                    </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DotNote" translatesAutoresizingMaskIntoConstraints="NO" id="skQ-fU-ccD" userLabel="Upper Dot Image">
-                        <rect key="frame" x="14" y="95" width="2" height="2"/>
+                        <rect key="frame" x="14" y="171" width="2" height="2"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="2" id="b9e-eV-2aX"/>
                             <constraint firstAttribute="height" constant="2" id="gRM-Wx-LG8"/>
                         </constraints>
                     </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DotNote" translatesAutoresizingMaskIntoConstraints="NO" id="XVh-vv-NuG" userLabel="Lower Dot Image">
+                        <rect key="frame" x="14" y="198" width="2" height="2"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="0IV-My-ngd"/>
+                            <constraint firstAttribute="height" constant="2" id="a30-28-KzA"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GIr-Hd-q9h" userLabel="Note Image Black">
+                        <rect key="frame" x="5" y="173" width="20" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="Qd9-13-TuE"/>
+                            <constraint firstAttribute="height" constant="25" id="UDU-IB-VJG"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DotNoteBlack" translatesAutoresizingMaskIntoConstraints="NO" id="4no-qS-9NH" userLabel="Upper Dot Black Image">
+                        <rect key="frame" x="14" y="171" width="2" height="2"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="EFZ-dg-tNM"/>
+                            <constraint firstAttribute="height" constant="2" id="M2h-5Y-W21"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DotNoteBlack" translatesAutoresizingMaskIntoConstraints="NO" id="XSk-5p-Zww" userLabel="Lower Dot Black Image">
+                        <rect key="frame" x="14" y="198" width="2" height="2"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="2" id="PRv-N0-XjF"/>
+                            <constraint firstAttribute="height" constant="2" id="mI2-6B-GVF"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" red="0.011708233510000001" green="0.01191492658" blue="0.0039204889909999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="hg4-la-JWQ" secondAttribute="bottom" constant="67" id="9J4-0F-YXL"/>
+                <constraint firstItem="GIr-Hd-q9h" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="JfQ-Tp-ZG9"/>
+                <constraint firstItem="4no-qS-9NH" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="LVH-Vc-eWb"/>
+                <constraint firstItem="XSk-5p-Zww" firstAttribute="top" secondItem="GIr-Hd-q9h" secondAttribute="bottom" id="N0c-Rq-moe"/>
                 <constraint firstItem="nkZ-Yi-Og3" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="RoK-vh-6BJ"/>
                 <constraint firstItem="XVh-vv-NuG" firstAttribute="top" secondItem="hg4-la-JWQ" secondAttribute="bottom" id="alh-qB-0F2"/>
+                <constraint firstItem="XSk-5p-Zww" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="bLX-42-7op"/>
                 <constraint firstItem="XVh-vv-NuG" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="bp9-uA-YDe"/>
                 <constraint firstItem="hg4-la-JWQ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="fE0-xd-IPb"/>
                 <constraint firstItem="skQ-fU-ccD" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gSb-bw-QiP"/>
                 <constraint firstItem="hg4-la-JWQ" firstAttribute="top" secondItem="skQ-fU-ccD" secondAttribute="bottom" id="gfV-9V-Ov0"/>
                 <constraint firstItem="nkZ-Yi-Og3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="pvm-kf-u8l"/>
+                <constraint firstAttribute="bottom" secondItem="GIr-Hd-q9h" secondAttribute="bottom" constant="67" id="slF-Or-jUZ"/>
+                <constraint firstItem="GIr-Hd-q9h" firstAttribute="top" secondItem="4no-qS-9NH" secondAttribute="bottom" id="wzc-1P-NT6"/>
             </constraints>
-            <size key="customSize" width="30" height="189"/>
+            <size key="customSize" width="30" height="265"/>
             <connections>
                 <outlet property="beatLabel" destination="nkZ-Yi-Og3" id="bBW-4y-1g0"/>
+                <outlet property="lowerDotNoteBlackImageView" destination="XSk-5p-Zww" id="HHM-GN-ouX"/>
                 <outlet property="lowerDotNoteImageView" destination="XVh-vv-NuG" id="lhw-xJ-M2k"/>
+                <outlet property="noteBlackImageView" destination="GIr-Hd-q9h" id="wwX-nQ-lPK"/>
                 <outlet property="noteImageView" destination="hg4-la-JWQ" id="B1P-yD-8n1"/>
+                <outlet property="upperDotNoteBlackImageView" destination="4no-qS-9NH" id="O0d-Qx-bdV"/>
                 <outlet property="upperDotNoteImageView" destination="skQ-fU-ccD" id="e3H-nk-GYo"/>
             </connections>
-            <point key="canvasLocation" x="123.18840579710145" y="153.01339285714286"/>
+            <point key="canvasLocation" x="123.18840579710145" y="161.71875"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="DotNote" width="2" height="2"/>
+        <image name="DotNoteBlack" width="2" height="2"/>
     </resources>
 </document>

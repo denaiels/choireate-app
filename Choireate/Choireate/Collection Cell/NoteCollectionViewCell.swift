@@ -11,8 +11,11 @@ class NoteCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var beatLabel: UILabel!
     @IBOutlet weak var noteImageView: UIImageView!
+    @IBOutlet weak var noteBlackImageView: UIImageView!
     @IBOutlet weak var upperDotNoteImageView: UIImageView!
     @IBOutlet weak var lowerDotNoteImageView: UIImageView!
+    @IBOutlet weak var upperDotNoteBlackImageView: UIImageView!
+    @IBOutlet weak var lowerDotNoteBlackImageView: UIImageView!
     
     static let identifier = "NoteCollectionViewCell"
     
@@ -23,11 +26,30 @@ class NoteCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+//        let blackView = UIView(frame: bounds)
+//        blackView.backgroundColor = UIColor.cpBlack
+//        self.backgroundView = blackView
+//        
+//        let lightRedView = UIView(frame: bounds)
+//        lightRedView.backgroundColor = UIColor.cpLightRed
+//        self.selectedBackgroundView = lightRedView
+        
+        self.beatLabel.textColor = UIColor.cpWhite
+        self.noteBlackImageView.isHidden = true
+        self.upperDotNoteBlackImageView.isHidden = true
+        self.lowerDotNoteBlackImageView.isHidden = true
+        
     }
     
     public func configure(with note: Note) {
+        self.upperDotNoteImageView.image = UIImage(named: "DotNote")
+        self.lowerDotNoteImageView.image = UIImage(named: "DotNote")
+        self.upperDotNoteBlackImageView.image = UIImage(named: "DotNoteBlack")
+        self.lowerDotNoteBlackImageView.image = UIImage(named: "DotNoteBlack")
         self.noteImageView.image = UIImage(named: note.image)
+        self.noteBlackImageView.image = UIImage(named: note.imageBlack)
+        
         if note.lowerNote == false {
             self.lowerDotNoteImageView.isHidden = true
         }
