@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 var selectedIndex: Int = 0
 var chosenNoteName: NoteType = .blank
@@ -57,7 +58,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - Model
     
     var models = [Note]()
-    
+    var player: AVAudioPlayer?
     
     
     
@@ -100,6 +101,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         setNoteOnIndex()
+        table.reloadData()
+        
     }
     @IBAction func dotButtonDidTap(_ sender: UIButton) {
         chosenNoteName = .dot
@@ -200,6 +203,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Playback
     @IBAction func playButtonDidTap(_ sender: UIButton) {
+        if let player = player, player.isPlaying {
+            // stop playback
+        } else {
+            // set up and play
+            do {
+                try AVAudioSession.sharedInstance().setMode(.default)
+                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
+                
+                
+            } catch {
+                print("audio cannot be played")
+            }
+        }
     }
     @IBAction func backwardsButtonDidTap(_ sender: UIButton) {
     }
@@ -231,6 +247,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = table.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
         
         cell.configure(with: models)
+        cell.collectionView.reloadData()
         
         return cell
     }
@@ -250,6 +267,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.backgroundColor = UIColor.cpBlack
         }
     }
+    
+    
     
 }
 
